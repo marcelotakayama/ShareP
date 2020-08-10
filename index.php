@@ -146,27 +146,5 @@
         background-color: #4CAF50;
         color: white;
     }
-
-    .button2 {
-        background-color: white; 
-        color: black; 
-        border: 2px solid #008CBA;
-    }
-
-    .button2:hover {
-        background-color: #008CBA;
-        color: white;
-    }
-
-    .button3 {
-        background-color: white; 
-        color: black; 
-        border: 2px solid #f44336;
-    }
-
-    .button3:hover {
-        background-color: #f44336;
-        color: white;
-    }
 </style>
 </html>
