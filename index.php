@@ -14,6 +14,7 @@
     //     $PRODUTO     = $linha["PRODUTO"];
     //     echo $PRODUTO;
     // }
+
 ?>
 
 
@@ -38,7 +39,6 @@
             </ul> -->
         </div>
     </nav>
-    <h4 class='center'>Produtos Cadastrados</h4><br>
 
     <?php 
             if (!isset($_POST["botao"])) {
@@ -49,17 +49,12 @@
                 include "./$botao";
             } else {   
     ?>
+    <h4 class='center'>Produtos Cadastrados</h4><br>
     <div class='container center'>
         <form action="" method='post'>
             <button name='botao' value='cadastrar.php' type='submit' class='button button1'>Cadastrar Novo Produto</button>
-        <!-- </form>
-        <form action="" method='post'> -->
-            <button name='botao2' value='cadastrar.php' type='submit' class='button button2'>Editar Produto</button>
-        <!-- </form>
-        <form action="" method='post'> -->
-            <button name='botao3' value='cadastrar.php' type='submit' class='button button3'>Apagar Produto</button>
         </form>
-    </div>
+    </div><br><br>
     <div class="container grey lighten-4">
         <table>
             <tr>
@@ -67,6 +62,7 @@
                 <th>Produto</th>
                 <th>Quantidade</th>
                 <th>Preço</th>
+                <th>Apagar</th>
             </tr>
 
             <?php
@@ -76,6 +72,7 @@
                     echo "<td>" . $row['PRODUTO'] . "</td>";
                     echo "<td>" . $row['QUANTIDADE'] . "</td>";
                     echo "<td>" . $row['PRECO'] . "</td>";
+                    echo "<td><a href='delete.php?id=".$row['ID']."'>Apagar</a></td>";
                     echo "</tr>";
                 }
             ?>
@@ -93,7 +90,7 @@
 
 
 
-    <footer class="page-footer">
+    <footer class="page-footer blue lighten-3">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
@@ -105,16 +102,13 @@
                     <ul>
                     <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
                     <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
                 </ul>
             </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            © 2020 Copyright Text
             </div>
         </div>
     </footer>
