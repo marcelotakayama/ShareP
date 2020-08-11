@@ -1,28 +1,14 @@
 <?php      
     $con = mysqli_connect("localhost", "root", "", "sistemaCadastro");
-      // Check connection
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-    //mysqli_query($con, "INSERT INTO produtos (ID,PRODUTO,QUANTIDADE,PRECO)  VALUES ('','CELULAR','15','1500.99')");
-    //mysqli_query($con, "UPDATE teste SET NOME ='Uns' WHERE ID= '1' ");
-    //mysqli_query($con, "DELETE FROM teste WHERE ID = '1' ");
-
     $result10  =  mysqli_query($con, "SELECT * FROM produtos");
-
-    // while ($linha = mysqli_fetch_array($result10)) {
-    //     $PRODUTO     = $linha["PRODUTO"];
-    //     echo $PRODUTO;
-    // }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta charset="UTF-8">
@@ -32,10 +18,7 @@
 <body>
     <nav class='blue lighten-3'>
         <div class="container nav-wrapper">
-        <a href="#" class="brand-logo">SistemaCadastro</a>
-            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="cadastrar.php">Cadastrar</a></li>
-            </ul> -->
+            <a href="#" class="brand-logo">SistemaCadastro</a>
         </div>
     </nav>
 
@@ -110,7 +93,7 @@
 
 <style>
     .button {
-        background-color: #4CAF50; /* Green */
+        background-color: #4CAF50;
         border: none;
         color: white;
         padding: 16px 32px;
