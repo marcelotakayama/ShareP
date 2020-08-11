@@ -1,2 +1,3 @@
 # Kadastre
-CRUD que simula um sistema simples de cadastro de produtos feito com HTML, CSS, JS, PHP e o framework Materialize
+Sistema simples de cadastro de produtos realizado com o propósito de entender os conceitos básicos de HTML, CSS, JS, PHP e Matereialze
+

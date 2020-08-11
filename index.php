@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Footer bem Top</h5>
+                    <h5 class="white-text">Footer</h5>
                     <p class="grey-text text-lighten-4">Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
