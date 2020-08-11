@@ -16,8 +16,6 @@
     // }
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +24,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Cadastro</title>
@@ -41,13 +40,13 @@
     </nav>
 
     <?php 
-            if (!isset($_POST["botao"])) {
-                $_POST["botao"] = "";
-            }
-            $botao = $_POST["botao"];
-            if ($botao != ""){
-                include "./$botao";
-            } else {   
+        if (!isset($_POST["botao"])) {
+            $_POST["botao"] = "";
+        }
+        $botao = $_POST["botao"];
+        if ($botao != ""){
+            include "./$botao";
+        } else {   
     ?>
     <h4 class='center'>Produtos Cadastrados</h4><br>
     <div class='container center'>
@@ -55,10 +54,9 @@
             <button name='botao' value='cadastrar.php' type='submit' class='button button1'>Cadastrar Novo Produto</button>
         </form>
     </div><br><br>
-    <div class="container grey lighten-4">
-        <table>
+    <div class="container">
+        <table class="highlight">
             <tr>
-                <th>ID</th>
                 <th>Produto</th>
                 <th>Quantidade</th>
                 <th>Preço</th>
@@ -68,7 +66,6 @@
             <?php
                 while ($row = mysqli_fetch_array($result10)) {
                     echo "<tr>";
-                    echo "<td>" . $row['ID'] . "</td>";
                     echo "<td>" . $row['PRODUTO'] . "</td>";
                     echo "<td>" . $row['QUANTIDADE'] . "</td>";
                     echo "<td>" . $row['PRECO'] . "</td>";
@@ -82,13 +79,7 @@
     <?php 
         }
     ?>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
+    <br><br><br><br><br>
 
     <footer class="page-footer blue lighten-3">
         <div class="container">
@@ -108,7 +99,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-            © 2020 Copyright Text
+            © 2020 Copyright 
             </div>
         </div>
     </footer>
@@ -118,10 +109,6 @@
 </body>
 
 <style>
-    tr:nth-child(odd) { background-color : #f5f5f5; }
-    tr:nth-child(even) { background-color : #f5f5f5; }
-    tr:hover { background-color : #bdbdbd; }
-
     .button {
         background-color: #4CAF50; /* Green */
         border: none;
